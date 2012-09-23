@@ -7,6 +7,7 @@ var app = express();
 app.configure(function(){
 	app.set('views', __dirname + '/views');
 	app.set('view engine', 'ejs');
+	app.use(express.favicon('public/favicon.ico'));
 	app.use(express.static(__dirname + '/public'));
 	app.use(app.router);
 });
