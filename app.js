@@ -13,6 +13,7 @@ app.configure(function(){
 });
 
 app.get('/', routes.index);
+app.post('/', routes.index);
 
 http.createServer(app).listen(3000);
 
