@@ -17,9 +17,9 @@
     <h1>DEAPIT</h1>
     <form action="/" method="post">
       <ul>
-        <li><input id="endpoint" name="endpoint" type="text" value=""/></li>
-        <li><textarea id="headers" name="headers"></textarea></li>
-        <li><textarea id="request" name="request"></textarea></li>
+        <li><input id="endpoint" name="request[endpoint]" type="text" value="<%= request.endpoint %>"/></li>
+        <li><textarea id="headers" name="request[headers]"><%= request.headers %></textarea></li>
+        <li><textarea id="request" name="request[body]"><%= request.body %></textarea></li>
         <li><button id="submit" name="submit" type="submit">Submit</button></li>
       </ul>
     </form>
