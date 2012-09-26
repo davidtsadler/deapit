@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>DEAPIT</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
@@ -16,13 +16,14 @@
   <body>
     <h1>DEAPIT</h1>
     <form action="/" method="post">
-      <ul>
-        <li><input id="endpoint" name="request[endpoint]" type="text" value="<%= request.endpoint %>"/></li>
-        <li><textarea id="headers" name="request[headers]"><%= request.headers %></textarea></li>
-        <li><textarea id="request" name="request[body]"><%= request.body %></textarea></li>
-        <li><button id="submit" name="submit" type="submit">Submit</button></li>
-      </ul>
+      <input id="endpoint" name="apiReq[endpoint]" type="text" value="<%= apiReq.endpoint %>"/><br/>
+      <textarea id="headers" name="apiReq[headers]"><%= apiReq.headers %></textarea><br/>
+      <textarea id="body" name="apiReq[body]"><%= apiReq.body %></textarea><br/>
+      <button id="submit" name="submit" type="submit">Submit</button><br/>
     </form>
+    <% if (apiRes) { %>
+    <textarea id="response" ><%= apiRes.body %></textarea>
+    <% } %>
     <script src="js/app.js"></script>
   </body>
 </html>

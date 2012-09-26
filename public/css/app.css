@@ -7,3 +7,8 @@ input, textarea
 {
   width: 800px;
 }
+
+textarea
+{
+  height: 200px;
+}
